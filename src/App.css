@@ -36,3 +36,273 @@
     transform: rotate(360deg);
   }
 }
+.searchForm {
+  margin-top: 50px;
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+}
+.primarySearch {
+  width: 30%;
+
+
+}
+.searchButton {
+  margin-left: 15px;
+}
+.logoutButton {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.favorite-image {
+  width: 20rem;
+  float: left;
+  margin-left: 15px;
+  margin-right: 15px;
+  border-radius: 10px;
+}
+.favoriteDelete {
+  width: 100px;
+  height: 40px;
+  margin-left: 90%;
+  margin-bottom: 10px;
+  /* margin-right: 10px;
+  margin-bottom: 0;
+  position: absolute;
+  bottom: 10px;
+  right: 10px; */
+}
+.recipe-card {
+  margin-top: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+  background-color: #6c584c
+}
+.recipe-card-image {
+  padding-top: 10px;
+  border-radius: 4%;
+  display: block;
+  float: left;
+}
+.card-title {
+  margin: 5px;
+  text-align: center;
+}
+.favorite-container {
+  margin: 20px ;
+  overflow: auto;
+
+}
+.favorite-ingredients {
+    float:inline-end;
+    margin-left: 210px;
+    width: 300px;
+}
+.recipe-modal {
+  height: 97%;
+}
+.modal-title{
+  width: 100%;
+  text-align: center;
+}
+.modal-card{
+  background-color: #dde5b6;
+}
+.modal-header{
+  background-color: #6c584c;
+}
+.modal-footer{
+  background-color: #6c584c;
+}
+.modal-body{
+  background-color: #adc178;
+}
+#favorite{
+  cursor: pointer;
+}
+#modal-recipe{
+ float: left;
+ text-align: center;
+}
+#modal-image{
+  float: left;
+}
+#modal-ingredients-title{
+  font-weight: bolder;
+  text-align: center;
+}
+#modal-directions-title{
+  font-weight: bolder;
+  text-align: center;
+}
+#modal-ingredients{
+ margin-top: 10px;
+}
+
+.nav-link{
+  color: rgb(124 218 144 / 90%)
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 8%;
+  background-color: #f0ead2;
+
+}
+#footerLogo{
+  margin-top: 15px;
+  margin-left: 50px;
+}
+
+#footerCreator{
+  margin-top: 15px;
+  text-align: center;
+  width: 100%;
+}
+
+.greeting{
+  text-align: center;
+}
+.greeting:nth-child(1){
+  margin-top: 50px;
+  font-size: 100px;
+  line-height: 90px;
+  font-family: copperplate;
+  font-weight: bolder;
+}
+.greeting:nth-child(2){
+  font-size: 100px;
+  line-height: 90px;
+  font-family: copperplate;
+  font-weight: bolder;
+}
+.greeting:nth-child(3){
+  margin-top: 50px;
+  font-size: 30px;
+  font-family: copperplate;
+  font-weight: bold;
+}
+.greeting:nth-child(4){
+  margin-top: 30px;
+  font-size: 30px;
+  font-family: copperplate;
+  font-weight: bold;
+}
+.greeting:nth-child(5){
+  font-size: 30px;
+  font-family: copperplate;
+  font-weight: bold;
+}
+.loginGreeting{
+  margin-top: 75px;
+  font-size: 20px;
+  text-align: center;
+  font-family: copperplate;
+  font-weight: bold;
+}
+#root{
+  background-color: #ededed;
+  width: 100%;
+}
+html{
+  background-color: #ededed;
+}
+.loginButton{
+  margin: 0 auto;
+  display:block;
+}
+#footerImage{
+  width: 100px;
+}
+
+#logoLogin{
+  display: block;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15%;
+}
+.card-column{
+  width: 100%;
+  margin-top: 25px;
+}
+.favoriteCard{
+  margin: 0 auto;
+  margin-top: 25px;
+  display:block;
+  width: 100%;
+}
+.favIngredientTitle{
+  font-weight: bold;
+  text-align: center;
+}
+.favRecipeTitle{
+  font-weight: bold;
+  text-align: center;
+}
+.favRecipe{
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.favIngredient{
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.favoriteCardTitle{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.favoritesFooter{
+  height: 85px;
+}
+.about-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.about-card{
+  margin-top: 40px;
+  width: 22rem;
+  text-align: center;
+
+}
+.about-title{
+  margin-top: 15px;
+  line-height: 12px;
+}
+.about-text{
+  font-size: 16px;
+  margin-top: 7px;
+  
+}
+#about-image{
+  margin-top: 8px;
+  width: 15rem;
+  
+}
+.about-header{
+  text-align: center;
+  font-weight: bold;
+  background-color: #6c584c;
+}
+#david-image{
+  margin-top: 8px;
+  width: 15rem;
+}
+#bryce-image{
+  margin-top: 8px;
+  width: 15rem;
+  
+}
+body{
+  margin-bottom: 8%;
+}
+
+.about-card{
+  background-color: #adc178;
+}
