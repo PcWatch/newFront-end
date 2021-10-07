@@ -1,6 +1,6 @@
 
 import { Component } from "react";
-import  { Card, Modal, Button } from "react-bootstrap";
+import  { Modal, Button } from "react-bootstrap";
 
 class RecipeModal extends Component {
   handleAddClick = () => {
@@ -26,7 +26,7 @@ class RecipeModal extends Component {
           </Modal.Header>
           <Modal.Body>
             <div id="modal-recipe">
-              <img id="modal-image" style={{ width: "20rem" }} variant="top"src={this.props.selectedRecipe.image} />
+              <img id="modal-image" style={{ width: "20rem" }} variant="top"src={this.props.selectedRecipe.image} alt="hi"/>
               <div>
                 <div id="modal-ingredients-title">Ingredients</div>
                 <div id="modal-ingredients">{this.props.selectedRecipe.ingredients}</div>
@@ -44,11 +44,11 @@ class RecipeModal extends Component {
             </div>
           </Modal.Body>
           <Modal.Footer>
-            {this.props.isFavorited ? 
+            {/* {this.props.isFavorited ? 
               <Button onClick={()=>this.handleDeleteClick(this.props.selectedRecipe.id)}>Remove from Favorites</Button>
-               : 
+               :  */}
                 <Button onClick={()=>this.handleAddClick()}>Add to Favorites</Button>
-              } 
+              {/* }  */}
           </Modal.Footer>
         </Modal>
       </>
