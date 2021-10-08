@@ -14,7 +14,7 @@ export default class Favorites extends Component {
       <>
         {this.props.favoritesData && 
           <Col className="card-column" xs={1} sm={1} md={1} lg={1}>
-            {this.props.favoritesData.map( (recipeData) => <FavCard deleteFavoriteFromDB={this.props.deleteFavoriteFromDB} key={recipeData._id} recipeData={recipeData} />              
+            {this.props.favoritesData.map( (recipeData) => <FavCard deleteFavoriteFromDB={this.props.deleteFavoriteFromDB} key={recipeData._id} recipeData={recipeData} saveIngredientToDB={this.props.saveIngredientToDB}/>              
               )}
           </Col>
         }
@@ -37,7 +37,11 @@ class FavCard extends Component {
           </div>
             {/* {this.props.recipeData.ingredients.map(ingredient => 
               (
+                <div>
                 <div>{ingredient}</div>
+                <input></input>
+                <Button></Button>
+                </div>
               ))} */}
             <div class="favRecipeTitle">Recipe</div>
             <div class="favRecipe">{this.props.recipeData.recipe}</div>
