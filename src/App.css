@@ -44,8 +44,6 @@
 }
 .primarySearch {
   width: 30%;
-
-
 }
 .searchButton {
   margin-left: 15px;
@@ -57,7 +55,6 @@
 
 .favorite-image {
   width: 20rem;
-  float: left;
   margin-left: 15px;
   margin-right: 15px;
   border-radius: 10px;
@@ -129,6 +126,8 @@
   float: left;
 }
 #modal-ingredients-title{
+
+  margin-top: 50px;
   font-weight: bolder;
   text-align: center;
 }
@@ -150,7 +149,7 @@
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 8%;
+  height: 7%;
   background-color: #f0ead2;
 
 }
@@ -305,4 +304,25 @@ body{
 
 .about-card{
   background-color: #adc178;
+}
+.ingredientForm{
+  
+}
+.ingredientLabel{
+  font-size: 12px;
+  
+}
+.quantityAdd{
+  width: 40px;
+}
+.ingredientButton{
+}
+.ingredientAddDiv{
+  float: left;
+
+}
+
+.ingredientForm{
+  diplay: flex;
+  float:;
 }

@@ -5,13 +5,13 @@ import RecipeModal from "./RecipeModal";
 import Search from "./Search";
 
 class Main extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     isFavorited: false,
-  //     isChecked: false,
-  //   };
-  // }
+  constructor(props) {
+    super(props);
+    this.state = {
+      isFavorited: false,
+      recipe: []
+    };
+  }
   componentDidMount(){
     this.props.getFavoritesFromDB();
     // this.favorited();
@@ -44,11 +44,12 @@ class Main extends Component {
   //     });
   // }isFavorited={this.state.isFavorited}
   render() {
+    
     return (
       <>
         <Search searchQuery={this.props.searchQuery} getSearchQuery={this.props.getSearchQuery} getRecipes={this.props.getRecipes}/>
         <Recipecard handleModal={this.props.handleModal} recipe={this.props.recipe} getRecipeId={this.props.getRecipeId} getfullRecipes={this.props.getfullRecipes} handleOpen={this.props.openModel} />
-        <RecipeModal show={this.props.show} handleModal={this.props.handleModal} saveFavoriteToDB={this.props.saveFavoriteToDB} selectedRecipe={this.props.fullRecipe} deleteFavoriteFromDB={this.props.deleteFavoriteFromDB} getFavoritesFromDB={this.props.getFavoritesFromDB}
+        <RecipeModal show={this.props.show} handleModal={this.props.handleModal} saveFavoriteToDB={this.props.saveFavoriteToDB} selectedRecipe={this.props.fullRecipe} deleteFavoriteFromDB={this.props.deleteFavoriteFromDB} getFavoritesFromDB={this.props.getFavoritesFromDB} recipe={this.state.recipe}
         favoritesData={this.props.favoritesData} />
       </>
     );

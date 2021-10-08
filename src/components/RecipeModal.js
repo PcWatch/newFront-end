@@ -1,21 +1,21 @@
-
 import { Component } from "react";
 import  { Modal, Button } from "react-bootstrap";
 
 class RecipeModal extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isFavorited: false,
+    };
+  }
   handleAddClick = () => {
     this.props.saveFavoriteToDB(this.props.selectedRecipe.id)
-    this.props.getFavoritesFromDB()
+    this.setState({isFavorited: true})
+    this.props.handleModal();
   }
-  handleDeleteClick = (id) => {
-      this.props.deleteFavoriteFromDB(id)
-      this.props.getFavoritesFromDB()
-  }
-
+  
   render() {
-    
-    console.log(this.props.selectedRecipe.ingredients)
-    // console.log(this.props.favoritesData)
+
     return (
       <>
         <Modal size="lg"
@@ -30,10 +30,6 @@ class RecipeModal extends Component {
               <div>
                 <div id="modal-ingredients-title">Ingredients</div>
                 <div id="modal-ingredients">{this.props.selectedRecipe.ingredients}</div>
-                {/* {this.props.selectedRecipe.ingredients.map(element => {
-                  <div>{element}</div>
-                })} */}
-                {/* <Ingredient selectedRecipe={this.props.selectedRecipe}/> */}
               </div>
             </div>
             <div>
@@ -44,11 +40,7 @@ class RecipeModal extends Component {
             </div>
           </Modal.Body>
           <Modal.Footer>
-            {/* {this.props.isFavorited ? 
-              <Button onClick={()=>this.handleDeleteClick(this.props.selectedRecipe.id)}>Remove from Favorites</Button>
-               :  */}
                 <Button onClick={()=>this.handleAddClick()}>Add to Favorites</Button>
-              {/* }  */}
           </Modal.Footer>
         </Modal>
       </>
@@ -58,19 +50,3 @@ class RecipeModal extends Component {
 
 export default RecipeModal;
 
-// class Ingredient extends Component {
-
-//   render() {
-//     console.log(this.props.selectedRecipe)
-
-//     return (
-//       <>
-//         {this.props.selectedRecipe.ingredients.map(element => {
-//           <div>{element}</div>
-//      
-// 
-//         })}
-//       </>
-//     );
-//   }
-// }
