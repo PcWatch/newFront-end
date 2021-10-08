@@ -61,6 +61,31 @@ class App extends React.Component {
     });
     
   };
+  
+    getIngredients = async (event) => {
+    event.preventDefault();
+    let ingredientURL = `${process.env.REACT_APP_SERVER}/ingredient?email=${this.state.user}`;
+    const ingredientResponse = await axios.get(ingredientURL);
+    this.setState({
+      ingredients: ingredientResponse.data,
+    });
+    
+  };
+
+    saveIngredientToDB = async (quantity, item) => {
+      // this will save one ingredient and its quantity, associated by email
+    const postURL = `${process.env.REACT_APP_SERVER}/ingredient?email=${this.state.user}&quantity=${quantity}&item=${item}`;
+    await axios.post(postURL);
+    console.log("ingredient saved to database");
+  };
+
+    deleteIngredientFromDB = async (id) => {
+    // this deletes a ingredient from the DB by id
+    const deleteURL = `${process.env.REACT_APP_SERVER}/ingredient/${id}?email=${this.state.user}`;
+    console.log('delete URL is ', deleteURL);
+    await axios.delete(deleteURL);
+    console.log("item with ID: ", id, " was deleted");
+  };
 
   getfullRecipes = async (id) => {
     // event.preventDefault();
@@ -84,12 +109,19 @@ class App extends React.Component {
     await axios.post(postURL);
     console.log("item saved to favorites");
   };
+  saveIngredientToDB = async (id) => {
+    // this takes a recipe ID and user email and saves the full recipe to the DB
+    const postURL = `${process.env.REACT_APP_SERVER}/ingredient/${id}?email=${this.state.user}`;
+    await axios.post(postURL);
+    console.log("item saved to shopping list");
+  };
 
   getFavoritesFromDB = async () => {
     // this returns fav items from the DB, can add optional search query by using query 'title'
     const getURL = `${process.env.REACT_APP_SERVER}/favorite?email=${this.state.user}`;
     const response = await axios.get(getURL);
     const favoritesData = response.data;
+    console.log("--------------->>>",favoritesData)
     this.setState({
       favoritesData,
     });
@@ -137,7 +169,7 @@ class App extends React.Component {
             </Route>
             <Route path="/Favorites">
             <Navigation />
-              <Favorites getFavoritesFromDB={this.getFavoritesFromDB} deleteFavoriteFromDB={this.deleteFavoriteFromDB} saveFavoriteToDB={this.saveFavoriteToDB} favoritesData={this.state.favoritesData}/>
+              <Favorites getFavoritesFromDB={this.getFavoritesFromDB} deleteFavoriteFromDB={this.deleteFavoriteFromDB} saveFavoriteToDB={this.saveFavoriteToDB} favoritesData={this.state.favoritesData} saveIngredientToDB={this.saveIngredientToDB}/>
             </Route>
             <Route path="/Shopping">
             <Navigation />
