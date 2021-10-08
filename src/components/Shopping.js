@@ -17,23 +17,23 @@ class Shopping extends Component {
         </thead>
         <tbody>
           <tr>
-            <td>Apple</td>
-            <td>2</td>
-            <td><Button className="itemRemove" variant="Danger">Remove</Button></td>
-          </tr>
-          <tr>
-            <td>Carrot</td>
-            <td>3</td>
-            <td><Button className="itemRemove" variant="Danger">Remove</Button></td>
-          </tr>
-          <tr>
-            <td>Sticks of Butter</td>
+            <td>Red Pepper</td>
             <td>1</td>
             <td><Button className="itemRemove" variant="Danger">Remove</Button></td>
           </tr>
           <tr>
-            <td>lbs of Turkey</td>
+            <td>Cloves Garlic</td>
             <td>2</td>
+            <td><Button className="itemRemove" variant="Danger">Remove</Button></td>
+          </tr>
+          <tr>
+            <td>Chopped Onion</td>
+            <td>1</td>
+            <td><Button className="itemRemove" variant="Danger">Remove</Button></td>
+          </tr>
+          <tr>
+            <td>Medium Potatoes</td>
+            <td>1</td>
             <td><Button className="itemRemove" variant="Danger">Remove</Button></td>
           </tr>
         </tbody>

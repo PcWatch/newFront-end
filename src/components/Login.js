@@ -1,6 +1,6 @@
 import { useAuth0 } from "@auth0/auth0-react";
 import { Button, Container } from "react-bootstrap";
-import { Redirect } from "react-router";
+// import { Redirect } from "react-router";
 import Logo from "../images/TrioWord.png"
 
 
@@ -10,7 +10,6 @@ function Login() {
   return (
     !isAuthenticated && 
     <Container className="loginContainer" style={{backgroundColor: "#f0ead2", width: '700px',}}>
-      {/* <img src={background} alt="bg" id="background" style={{}}/> */}
       <p class="greeting">Welcome</p>
       <p class="greeting">to</p>
       <img src={Logo} alt="logo-login" id="logoLogin" />
