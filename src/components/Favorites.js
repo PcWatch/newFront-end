@@ -45,7 +45,7 @@ class FavCard extends Component {
               ))} */}
             <div class="favRecipeTitle">Recipe</div>
             <div class="favRecipe">{this.props.recipeData.recipe}</div>
-          <Button onClick={() => this.props.deleteFavoriteFromDB(this.props.recipeData.id)} className="favoriteDelete" variant="danger">Remove</Button>
+            <Button onClick={() => this.props.deleteFavoriteFromDB(this.props.recipeData.id)} className="favoriteDelete" variant="danger">Remove</Button>
       </Card>
       
       

@@ -9,7 +9,7 @@ class Recipecard extends Component {
 
   render() {
     return (
-      <Container>
+      <Container className="recipeCardContiner">
         <Row xs={1} sm={2} md={3} lg={4}>
           {this.props.recipe.map( (recipeData) =>
           <Card className="recipe-card" key={recipeData.id} onClick={() => this.modalEvent(recipeData.id)} style={{ width: '25rem' }}>

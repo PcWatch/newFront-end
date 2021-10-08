@@ -149,6 +149,9 @@
 }
 #modal-directions{
   background-color: #457B9D;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
 }
 #modal-ingredients{
  margin-top: 10px;
@@ -160,6 +163,7 @@
 
 .footer {
   display: flex;
+  position:absolute;
   flex-direction: row;
   position: fixed;
   bottom: 0;
@@ -260,7 +264,6 @@ html{
 .favIngredientTitle{
   font-weight: bold;
   text-align: center;
-  background-color: ;
 }
 .favRecipeTitle{
   font-weight: bold;
@@ -343,9 +346,9 @@ body{
   height: 25px;
   font-size: 10px;
 }
-.ingredientAddDiv{
+/* .ingredientAddDiv{
   
-}
+} */
 .ingredientForm{
   display: flex;
   margin: "10px";
@@ -362,4 +365,7 @@ body{
 .itemRemove{
   background-color: red;
   color: white;
+}
+.recipeCardContiner{
+  padding-bottom: 5%;
 }
