@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { Card, Col, Button } from "react-bootstrap";
+import IngredientForm from "./IngredientForm";
 
 export default class Favorites extends Component {
 
@@ -31,12 +32,16 @@ class FavCard extends Component {
         <Card.Title className='favoriteCardTitle'>{this.props.recipeData.title}</Card.Title>
           <div class="favoriteRecipe">
             <img class="favorite-image" alt="favoriteRecipe" src={this.props.recipeData.image}/>
-            <div class="favIngredientTitle">Ingredients</div> 
-            <div class="favIngredient">{this.props.recipeData.ingredients}</div>
+            <div class="favIngredientTitle">Ingredients</div>
+            <IngredientForm class="ingredientForm"recipeData={this.props.recipeData}/>
+          </div>
+            {/* {this.props.recipeData.ingredients.map(ingredient => 
+              (
+                <div>{ingredient}</div>
+              ))} */}
             <div class="favRecipeTitle">Recipe</div>
             <div class="favRecipe">{this.props.recipeData.recipe}</div>
           <Button onClick={() => this.props.deleteFavoriteFromDB(this.props.recipeData.id)} className="favoriteDelete" variant="danger">Remove</Button>
-          </div>
       </Card>
       
       
