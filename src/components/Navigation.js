@@ -10,7 +10,7 @@ class Navigation extends React.Component {
   render() {
     return (
       <>
-        <Navbar  light style={{ backgroundColor: '#f0ead2' }} className="navStuff">
+        <Navbar  light style={{ backgroundColor: '#457b9d' }} className="navStuff">
           
           <Container>
             <img src={Logo} alt="Logo"/>
