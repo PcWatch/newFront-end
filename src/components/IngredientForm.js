@@ -4,11 +4,12 @@ import { Button, Form, FormControl, } from "react-bootstrap";
 export default class IngredientForm extends Component {
   clickEvent = (event) => {
     event.preventDefault();
-    this.props.getSearchQuery(event.target.value)
+    this.props.saveIngredientToDB()
+    
   }
   render(){
     return(
-      <div class="ingredientAddDiv" style={{border: "2px solid red", display: "flex", flexFlow: "row wrap", justifyContent:"space-evenly"}}>
+      <div class="ingredientAddDiv" style={{display: "flex", flexFlow: "row wrap", justifyContent:"space-evenly"}}>
       {this.props.recipeData.ingredients.map(ingredient => ingredient === ' ' ? '' : 
         (
           <>

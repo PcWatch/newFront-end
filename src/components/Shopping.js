@@ -1,18 +1,43 @@
 import { Component } from "react";
 import { withAuth0 } from "@auth0/auth0-react";
-import ListGroup  from "react-bootstrap/ListGroup";
+import Table  from "react-bootstrap/Table";
+import Button from 'react-bootstrap/Button'
 
 
 class Shopping extends Component {
   render() {
     return (
-    <ListGroup>
-      <ListGroup.Item>Cras justo odio</ListGroup.Item>
-      <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-      <ListGroup.Item>Morbi leo risus</ListGroup.Item>
-      <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
-      <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-    </ListGroup>
+      <Table striped bordered hover className="shoppingListTable">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Apple</td>
+            <td>2</td>
+            <td><Button className="itemRemove" variant="Danger">Remove</Button></td>
+          </tr>
+          <tr>
+            <td>Carrot</td>
+            <td>3</td>
+            <td><Button className="itemRemove" variant="Danger">Remove</Button></td>
+          </tr>
+          <tr>
+            <td>Sticks of Butter</td>
+            <td>1</td>
+            <td><Button className="itemRemove" variant="Danger">Remove</Button></td>
+          </tr>
+          <tr>
+            <td>lbs of Turkey</td>
+            <td>2</td>
+            <td><Button className="itemRemove" variant="Danger">Remove</Button></td>
+          </tr>
+        </tbody>
+      </Table>
     );
   }
 }
